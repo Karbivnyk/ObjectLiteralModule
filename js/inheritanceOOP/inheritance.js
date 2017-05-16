@@ -3,8 +3,10 @@
 //classical prototypal programing
 //
 
-//	Inheritance
-//	
+// classical pattern inheritance instantiation
+// var Person = function() { ... }
+// var john = new Person()''
+//
 function inherits(ctor, superCtor) {
   ctor.super_ = superCtor;
   ctor.prototype = Object.create(superCtor.prototype, {
@@ -40,7 +42,6 @@ var Musician = function(name, instument) {
 }
 
 inherits(Musician, Person);
-
 
 //new Method for Musician obj  
 Musician.prototype.getInstrument = function() {
